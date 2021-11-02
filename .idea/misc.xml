@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/background_user_score.xml" value="0.2074074074074074" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24375" />
+        <entry key="core/src/main/res/drawable/background_user_score.xml" value="0.2074074074074074" />
+        <entry key="core/src/main/res/drawable/card_foreground.xml" value="0.2074074074074074" />
+        <entry key="core/src/main/res/drawable/poster_placeholder.xml" value="0.2074074074074074" />
+        <entry key="core/src/main/res/layout/item_card_list.xml" value="0.25384615384615383" />
       </map>
     </option>
   </component>
