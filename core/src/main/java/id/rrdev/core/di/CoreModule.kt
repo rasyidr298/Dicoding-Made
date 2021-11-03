@@ -1,7 +1,7 @@
 package id.rrdev.core.di
 
 import androidx.room.Room
-import id.rrdev.core.data.MovieAppRepository
+import id.rrdev.core.domain.repository.MovieAppRepository
 import id.rrdev.core.data.source.local.LocalDataSource
 import id.rrdev.core.data.source.local.room.MovieDatabase
 import id.rrdev.core.data.source.remote.RemoteDataSource
@@ -36,7 +36,7 @@ val networkModule = module {
     }
     single {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3/discover/")
+            .baseUrl("https://api.themoviedb.org/3/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(get())
             .build()

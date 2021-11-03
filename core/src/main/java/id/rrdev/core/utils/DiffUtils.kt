@@ -2,7 +2,7 @@ package id.rrdev.core.utils
 
 import androidx.annotation.Nullable
 import androidx.recyclerview.widget.DiffUtil
-import id.rrdev.core.domain.model.Movie
+import id.rrdev.core.domain.Movie
 
 class DiffUtils(private val oldList: List<Movie>, private val newList: List<Movie>) :
     DiffUtil.Callback() {

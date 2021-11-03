@@ -3,7 +3,7 @@ package id.rrdev.core.utils
 import id.rrdev.core.data.source.local.entity.MovieEntity
 import id.rrdev.core.data.source.remote.response.MovieResponse
 import id.rrdev.core.data.source.remote.response.TvShowResponse
-import id.rrdev.core.domain.model.Movie
+import id.rrdev.core.domain.Movie
 
 
 object DataMapper {

@@ -1,4 +1,4 @@
-package id.rrdev.core.domain.model
+package id.rrdev.core.domain
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

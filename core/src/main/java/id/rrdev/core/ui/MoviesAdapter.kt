@@ -13,7 +13,7 @@ import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import id.rrdev.core.R
 import id.rrdev.core.databinding.ItemCardListBinding
-import id.rrdev.core.domain.model.Movie
+import id.rrdev.core.domain.Movie
 import id.rrdev.core.utils.DiffUtils
 import java.util.*
 
