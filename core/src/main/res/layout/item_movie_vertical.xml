@@ -23,16 +23,15 @@
             android:id="@+id/poster"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/poster_placeholder"
             android:contentDescription="@string/poster"
+            tools:src="@android:color/holo_blue_dark"
             android:scaleType="centerCrop"
             app:riv_corner_radius="20dp" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/foregroundpostertopbar"
-            android:src="@drawable/card_foreground" />
+            android:contentDescription="@string/foregroundpostertopbar"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

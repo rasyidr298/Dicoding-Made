@@ -19,10 +19,10 @@ fun Context.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
 
-fun View.snackbar(message: String) {
+fun View.snackbar(message: String, function: () -> (Unit)) {
     Snackbar.make(this, message, Snackbar.LENGTH_LONG).also { snackbar ->
         snackbar.setAction("OK") {
-            snackbar.dismiss()
+            function()
         }
     }.show()
 }

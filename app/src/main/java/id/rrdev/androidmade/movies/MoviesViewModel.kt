@@ -1,4 +1,4 @@
-package id.rrdev.androidmade.fragment.movies
+package id.rrdev.androidmade.movies
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

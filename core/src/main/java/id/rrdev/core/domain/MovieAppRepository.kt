@@ -20,7 +20,6 @@ interface IMovieAppRepository {
     fun getPopularMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
     fun getTopRatedMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
     fun getNowPlayingMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
-    fun getSearchMovies(query: String, page: Int, sort: String): Flow<Resource<List<Movie>>>
 
     //locale
     fun getFavoriteMovies(sort: String): Flow<List<Movie>>
@@ -139,28 +138,6 @@ class MovieAppRepository(
 
             override suspend fun createCall(): Flow<ApiResponse<List<MovieResponse>>> {
                 return remoteDataSource.getNowPlayingMovie(page)
-            }
-
-            override suspend fun saveCallResult(data: List<MovieResponse>) {
-                val movieList = DataMapper.mapMovieResponsesToEntities(data)
-                localDataSource.insertMovies(movieList)
-            }
-        }.asFlow()
-
-    override fun getSearchMovies(query: String, page: Int, sort: String): Flow<Resource<List<Movie>>> =
-        object : NetworkBoundResource<List<Movie>, List<MovieResponse>>() {
-            override fun loadFromDB(): Flow<List<Movie>> {
-                return localDataSource.getAllMovies(sort).map {
-                    DataMapper.mapEntitiesToDomain(it)
-                }
-            }
-
-            override fun shouldFetch(data: List<Movie>?): Boolean {
-                return data == null || data.isEmpty()
-            }
-
-            override suspend fun createCall(): Flow<ApiResponse<List<MovieResponse>>> {
-                return remoteDataSource.getSearchMovie(query, page)
             }
 
             override suspend fun saveCallResult(data: List<MovieResponse>) {

@@ -28,15 +28,14 @@
                     android:id="@+id/posterTopBar"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
-                    android:background="@drawable/poster_placeholder"
+                    android:src="@android:color/holo_blue_dark"
                     android:contentDescription="@string/postertopbar"
                     android:scaleType="centerCrop"/>
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/foregroundpostertopbar"
-                    android:src="@drawable/card_detail_foreground" />
+                    android:contentDescription="@string/foregroundpostertopbar" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

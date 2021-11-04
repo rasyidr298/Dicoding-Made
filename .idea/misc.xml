@@ -20,9 +20,12 @@
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.24" />
+        <entry key="app/src/main/res/layout/favorite_fragment.xml" value="0.16282894736842105" />
+        <entry key="app/src/main/res/layout/fragment_favorite_movie.xml" value="0.15394736842105264" />
+        <entry key="app/src/main/res/layout/fragment_tv_show_movie.xml" value="0.15394736842105264" />
         <entry key="app/src/main/res/layout/movies_fragment.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/search_fragment.xml" value="0.2578125" />
-        <entry key="app/src/main/res/layout/tv_show_fragment.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/search_fragment.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/tv_show_fragment.xml" value="0.165" />
         <entry key="app/src/main/res/menu/search_menu.xml" value="0.2578125" />
         <entry key="core/src/main/res/drawable/background_user_score.xml" value="0.2074074074074074" />
         <entry key="core/src/main/res/drawable/card_foreground.xml" value="0.2074074074074074" />
@@ -36,6 +39,9 @@
         <entry key="core/src/main/res/layout/item_movie_vertical.xml" value="0.15555555555555556" />
         <entry key="core/src/main/res/layout/item_popular.xml" value="0.15555555555555556" />
         <entry key="core/src/main/res/layout/item_top_rated_movie.xml" value="0.15555555555555556" />
+        <entry key="favorite/src/main/res/layout/favorite_fragment.xml" value="0.16123778501628663" />
+        <entry key="favorite/src/main/res/layout/fragment_favorite_movie.xml" value="0.1284722222222222" />
+        <entry key="favorite/src/main/res/layout/fragment_tv_show_movie.xml" value="0.1284722222222222" />
       </map>
     </option>
   </component>

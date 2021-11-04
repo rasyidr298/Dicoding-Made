@@ -11,7 +11,6 @@ interface IMovieAppUseCase {
     fun getPopularMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
     fun getTopRatedMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
     fun getNowPlayingMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
-    fun getSearchMovies(query: String, page: Int, sort: String): Flow<Resource<List<Movie>>>
 
     //local
     fun getFavoriteMovies(sort: String): Flow<List<Movie>>
@@ -38,9 +37,6 @@ class MovieAppInteractor(private val iMovieAppRepository: IMovieAppRepository) :
 
     override fun getNowPlayingMovies(page: Int, sort: String): Flow<Resource<List<Movie>>> =
         iMovieAppRepository.getNowPlayingMovies(page, sort)
-
-    override fun getSearchMovies(query: String, page: Int,sort: String,): Flow<Resource<List<Movie>>> =
-        iMovieAppRepository.getSearchMovies(query, page, sort)
 
 
     //local

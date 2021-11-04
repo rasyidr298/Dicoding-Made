@@ -1,10 +1,9 @@
 package id.rrdev.androidmade.di
 
 import id.rrdev.androidmade.detail.DetailViewModel
-import id.rrdev.androidmade.fragment.movies.MoviesViewModel
-import id.rrdev.androidmade.fragment.search.SearchViewModel
-import id.rrdev.core.domain.MovieAppInteractor
+import id.rrdev.androidmade.movies.MoviesViewModel
 import id.rrdev.core.domain.IMovieAppUseCase
+import id.rrdev.core.domain.MovieAppInteractor
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import org.koin.android.viewmodel.dsl.viewModel
@@ -19,7 +18,5 @@ val useCaseModule = module {
 @FlowPreview
 val viewModelModule = module {
     viewModel { MoviesViewModel(get()) }
-//    viewModel { TvShowViewModel(get()) }
     viewModel { DetailViewModel(get()) }
-    viewModel { SearchViewModel(get()) }
 }

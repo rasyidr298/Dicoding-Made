@@ -1,10 +1,12 @@
-package id.rrdev.androidmade.fragment.movies
+package id.rrdev.androidmade.movies
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -65,6 +67,7 @@ class MoviesFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         moviesFragmentBinding = MoviesFragmentBinding.inflate(inflater, container, false)
+        additionalView()
         return binding.root
     }
 
@@ -335,6 +338,12 @@ class MoviesFragment : Fragment() {
                 }
             })
         }
+    }
+
+    private fun additionalView() {
+        val toolbar: Toolbar = activity?.findViewById<View>(R.id.toolbar) as Toolbar
+        (activity as AppCompatActivity?)?.setSupportActionBar(toolbar)
+        setHasOptionsMenu(true)
     }
 
     override fun onPause() {

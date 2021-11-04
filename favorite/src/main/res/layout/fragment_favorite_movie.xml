@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondaryColor">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvTvShows"
+        android:id="@+id/rvFavorite"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_tv_show_movie" />
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="2"
+        tools:listitem="@layout/item_movie_vertical" />
 
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/menu"
@@ -26,7 +33,7 @@
         fab:menu_colorNormal="@color/colorAccent"
         fab:menu_colorPressed="@color/colorAccentPressed"
         fab:menu_colorRipple="@color/colorAccentPressed"
-        fab:menu_fab_label="Sort Tv Shows By"
+        fab:menu_fab_label="Sort Movies By"
         fab:menu_fab_size="normal"
         fab:menu_icon="@drawable/ic_sort"
         fab:menu_labels_colorNormal="@color/colorAccent"

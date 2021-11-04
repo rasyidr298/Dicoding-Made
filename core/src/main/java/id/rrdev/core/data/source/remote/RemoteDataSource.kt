@@ -91,20 +91,4 @@ class RemoteDataSource(private val apiService: ApiService) {
         }.flowOn(Dispatchers.IO)
     }
 
-    suspend fun getSearchMovie(query: String, page: Int): Flow<ApiResponse<List<MovieResponse>>> {
-        return flow {
-            try {
-                val response = apiService.searchMovie(query, page, apiKey)
-                val popularList = response.results
-                if (popularList.isEmpty()) {
-                    emit(ApiResponse.Success(response.results))
-                }else {
-                    emit(ApiResponse.Empty)
-                }
-            }catch (e: Exception) {
-                emit(ApiResponse.Error(e.toString()))
-            }
-        }.flowOn(Dispatchers.IO)
-    }
-
 }
