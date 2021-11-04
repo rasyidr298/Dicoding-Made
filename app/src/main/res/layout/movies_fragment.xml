@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primaryColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Welcome"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/rvCarousel"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                tools:background="@android:color/holo_blue_dark" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Tv Show"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/rvCarousel"
+                app:layout_constraintTop_toBottomOf="@+id/rvCarousel" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTvShow"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:spanCount="1"
+                tools:listitem="@layout/item_movie_horizontal" />
+
+            <TextView
+                android:id="@+id/tvPopular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Movie Popular"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/rvTvShow"
+                app:layout_constraintTop_toBottomOf="@+id/rvTvShow" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPopular"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPopular"
+                app:spanCount="1"
+                tools:listitem="@layout/item_movie_horizontal" />
+
+            <TextView
+                android:id="@+id/tvTopRated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Movie Top Rated"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/rvPopular"
+                app:layout_constraintTop_toBottomOf="@+id/rvPopular" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTopRated"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTopRated"
+                app:spanCount="1"
+                tools:listitem="@layout/item_movie_horizontal" />
+
+            <TextView
+                android:id="@+id/tvNowPlaying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Movie Now Playing"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/rvTopRated"
+                app:layout_constraintTop_toBottomOf="@+id/rvTopRated" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNowPlaying"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="11dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNowPlaying"
+                app:spanCount="2"
+                tools:listitem="@layout/item_movie_vertical" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/not_found"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/no_data" />
+
+            <TextView
+                android:id="@+id/not_found_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/not_found"
+                app:layout_constraintStart_toStartOf="@+id/not_found"
+                app:layout_constraintTop_toBottomOf="@+id/not_found" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="@color/colorAccent"
+        fab:menu_colorPressed="@color/colorAccentPressed"
+        fab:menu_colorRipple="@color/colorAccentPressed"
+        fab:menu_fab_label="Sort Movies By"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/ic_sort"
+        fab:menu_labels_colorNormal="@color/colorAccent"
+        fab:menu_labels_colorPressed="@color/colorAccentPressed"
+        fab:menu_labels_colorRipple="@color/colorAccentPressed"
+        fab:menu_labels_cornerRadius="10dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="@color/white"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/popularity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_star"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentPressed"
+            fab:fab_colorRipple="@color/colorAccentPressed"
+            fab:fab_label="Popularity"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_vote"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentPressed"
+            fab:fab_colorRipple="@color/colorAccentPressed"
+            fab:fab_label="Vote"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/newest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_date"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentPressed"
+            fab:fab_colorRipple="@color/colorAccentPressed"
+            fab:fab_label="Newest"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_default"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentPressed"
+            fab:fab_colorRipple="@color/colorAccentPressed"
+            fab:fab_label="Random"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
