@@ -35,7 +35,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Tv Show"
+                android:text="@string/tvshows"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/rvCarousel"
                 app:layout_constraintTop_toBottomOf="@+id/rvCarousel" />
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Movie Popular"
+                android:text="@string/movie_popular"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/rvTvShow"
                 app:layout_constraintTop_toBottomOf="@+id/rvTvShow" />
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Movie Top Rated"
+                android:text="@string/movie_top_rated"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/rvPopular"
                 app:layout_constraintTop_toBottomOf="@+id/rvPopular" />
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Movie Now Playing"
+                android:text="@string/movie_now_playing"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="@+id/rvTopRated"
                 app:layout_constraintTop_toBottomOf="@+id/rvTopRated" />
