@@ -28,8 +28,4 @@ class MoviesViewModel(private val movieAppUseCase: IMovieAppUseCase) : ViewModel
     fun getNowPlayingMovie(page: Int, sort: String): LiveData<Resource<List<Movie>>> {
         return movieAppUseCase.getNowPlayingMovies(page, sort).asLiveData()
     }
-
-    fun getSearchMovie(query: String, page: Int, sort: String): LiveData<Resource<List<Movie>>> {
-        return movieAppUseCase.getSearchMovies(query, page, sort).asLiveData()
-    }
 }

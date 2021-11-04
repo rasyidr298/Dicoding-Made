@@ -1,5 +1,6 @@
 package id.rrdev.androidmade.di
 
+import id.rrdev.androidmade.detail.DetailViewModel
 import id.rrdev.androidmade.fragment.movies.MoviesViewModel
 import id.rrdev.androidmade.fragment.search.SearchViewModel
 import id.rrdev.core.domain.MovieAppInteractor
@@ -19,6 +20,6 @@ val useCaseModule = module {
 val viewModelModule = module {
     viewModel { MoviesViewModel(get()) }
 //    viewModel { TvShowViewModel(get()) }
-//    viewModel { DetailViewModel(get()) }
+    viewModel { DetailViewModel(get()) }
     viewModel { SearchViewModel(get()) }
 }

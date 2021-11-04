@@ -1,9 +1,12 @@
 package id.rrdev.core.utils
 
+import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
+import android.graphics.Color
 import android.util.TypedValue
 import android.view.View
+import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.Toast
 import com.bumptech.glide.Glide
@@ -44,4 +47,13 @@ fun ImageView.loadImage(url: String) {
         .diskCacheStrategy(DiskCacheStrategy.ALL)
         .centerCrop()
         .into(this)
+}
+
+fun hideStatusBar(activity: Activity) {
+    activity.window.apply {
+        clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+        statusBarColor = Color.TRANSPARENT
+    }
 }

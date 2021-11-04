@@ -1,4 +1,4 @@
-package id.rrdev.core.domain.repository
+package id.rrdev.core.domain
 
 import id.rrdev.core.data.NetworkBoundResource
 import id.rrdev.core.data.Resource
@@ -7,7 +7,6 @@ import id.rrdev.core.data.source.remote.RemoteDataSource
 import id.rrdev.core.data.source.remote.network.ApiResponse
 import id.rrdev.core.data.source.remote.response.MovieResponse
 import id.rrdev.core.data.source.remote.response.TvShowResponse
-import id.rrdev.core.domain.Movie
 import id.rrdev.core.utils.AppExecutors
 import id.rrdev.core.utils.DataMapper
 import kotlinx.coroutines.flow.Flow
@@ -15,6 +14,7 @@ import kotlinx.coroutines.flow.map
 
 
 interface IMovieAppRepository {
+    //remote
     fun getDiscoverMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
     fun getTvShows(page: Int, sort: String): Flow<Resource<List<Movie>>>
     fun getPopularMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
@@ -22,12 +22,11 @@ interface IMovieAppRepository {
     fun getNowPlayingMovies(page: Int, sort: String): Flow<Resource<List<Movie>>>
     fun getSearchMovies(query: String, page: Int, sort: String): Flow<Resource<List<Movie>>>
 
+    //locale
     fun getFavoriteMovies(sort: String): Flow<List<Movie>>
     fun getFavoriteTvShows(sort: String): Flow<List<Movie>>
-
     fun getSearchMovies(search: String): Flow<List<Movie>>
     fun getSearchTvShows(search: String): Flow<List<Movie>>
-
     fun setMovieFavorite(movie: Movie, state: Boolean)
 }
 
@@ -37,6 +36,7 @@ class MovieAppRepository(
     private val appExecutors: AppExecutors
 ) : IMovieAppRepository {
 
+    //remote
     override fun getDiscoverMovies(page: Int, sort: String): Flow<Resource<List<Movie>>> =
         object : NetworkBoundResource<List<Movie>, List<MovieResponse>>() {
             override fun loadFromDB(): Flow<List<Movie>> {
@@ -169,6 +169,8 @@ class MovieAppRepository(
             }
         }.asFlow()
 
+
+    //locale
     override fun getSearchMovies(search: String): Flow<List<Movie>> {
         return localDataSource.getMovieSearch(search).map {
             DataMapper.mapEntitiesToDomain(it)

@@ -1,5 +1,6 @@
 package id.rrdev.androidmade.fragment.movies
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -12,6 +13,7 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import id.rrdev.androidmade.R
 import id.rrdev.androidmade.databinding.MoviesFragmentBinding
+import id.rrdev.androidmade.detail.DetailActivity
 import id.rrdev.core.data.Resource
 import id.rrdev.core.domain.Movie
 import id.rrdev.core.ui.*
@@ -138,11 +140,35 @@ class MoviesFragment : Fragment() {
             }
         }
 
-//        moviesAdapter.onItemClick = { selectedData ->
-//            val intent = Intent(activity, DetailActivity::class.java)
-//            intent.putExtra(DetailActivity.EXTRA_MOVIE, selectedData)
-//            startActivity(intent)
-//        }
+        carouselAdapter.onItemClick = { selectedData ->
+            val intent = Intent(activity, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_MOVIE, selectedData)
+            startActivity(intent)
+        }
+
+        tvShowAdapter.onItemClick = { selectedData ->
+            val intent = Intent(activity, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_MOVIE, selectedData)
+            startActivity(intent)
+        }
+
+        popularAdapter.onItemClick = { selectedData ->
+            val intent = Intent(activity, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_MOVIE, selectedData)
+            startActivity(intent)
+        }
+
+        topRatedAdapter.onItemClick = { selectedData ->
+            val intent = Intent(activity, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_MOVIE, selectedData)
+            startActivity(intent)
+        }
+
+        nowPlayingAdapter.onItemClick = { selectedData ->
+            val intent = Intent(activity, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_MOVIE, selectedData)
+            startActivity(intent)
+        }
     }
 
     private fun setList(sort: String) {
@@ -151,7 +177,6 @@ class MoviesFragment : Fragment() {
         viewModel.getPopularMovie(2, sort).observe(viewLifecycleOwner, popularMovie)
         viewModel.getTopRatedMovie(1, sort).observe(viewLifecycleOwner, topRatedMovie)
         viewModel.getNowPlayingMovie(1, sort).observe(viewLifecycleOwner, nowPlayingMovie)
-//        viewModel.getSearchMovie("dark",1, sort).observe(viewLifecycleOwner, searchMovie)
     }
 
     private val discoverMovie = Observer<Resource<List<Movie>>> { movies ->

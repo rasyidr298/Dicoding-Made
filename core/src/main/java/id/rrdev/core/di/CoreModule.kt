@@ -1,12 +1,12 @@
 package id.rrdev.core.di
 
 import androidx.room.Room
-import id.rrdev.core.domain.repository.MovieAppRepository
+import id.rrdev.core.domain.MovieAppRepository
 import id.rrdev.core.data.source.local.LocalDataSource
 import id.rrdev.core.data.source.local.room.MovieDatabase
 import id.rrdev.core.data.source.remote.RemoteDataSource
 import id.rrdev.core.data.source.remote.network.ApiService
-import id.rrdev.core.domain.repository.IMovieAppRepository
+import id.rrdev.core.domain.IMovieAppRepository
 import id.rrdev.core.utils.AppExecutors
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
