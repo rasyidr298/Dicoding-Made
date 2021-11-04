@@ -1,7 +1,6 @@
-package id.rrdev.core.domain.usecase
+package id.rrdev.core.domain
 
 import id.rrdev.core.data.Resource
-import id.rrdev.core.domain.Movie
 import id.rrdev.core.domain.repository.IMovieAppRepository
 import kotlinx.coroutines.flow.Flow
 

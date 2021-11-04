@@ -17,16 +17,24 @@
         <entry key="app/src/main/res/drawable/ic_vote.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/font/montserrat_bold.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.2578125" />
-        <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24375" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.24" />
-        <entry key="app/src/main/res/layout/movies_fragment.xml" value="0.2578125" />
+        <entry key="app/src/main/res/layout/movies_fragment.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/search_fragment.xml" value="0.2578125" />
         <entry key="app/src/main/res/layout/tv_show_fragment.xml" value="0.2578125" />
         <entry key="app/src/main/res/menu/search_menu.xml" value="0.2578125" />
         <entry key="core/src/main/res/drawable/background_user_score.xml" value="0.2074074074074074" />
         <entry key="core/src/main/res/drawable/card_foreground.xml" value="0.2074074074074074" />
+        <entry key="core/src/main/res/drawable/ic_broken_image.xml" value="0.1423611111111111" />
         <entry key="core/src/main/res/drawable/poster_placeholder.xml" value="0.2074074074074074" />
-        <entry key="core/src/main/res/layout/item_card_list.xml" value="0.25384615384615383" />
+        <entry key="core/src/main/res/layout/item_card_list.xml" value="0.375" />
+        <entry key="core/src/main/res/layout/item_card_list_vertical.xml" value="0.15555555555555556" />
+        <entry key="core/src/main/res/layout/item_carousel.xml" value="0.15555555555555556" />
+        <entry key="core/src/main/res/layout/item_movie_horizontal.xml" value="0.15555555555555556" />
+        <entry key="core/src/main/res/layout/item_movie_vertical.xml" value="0.15555555555555556" />
+        <entry key="core/src/main/res/layout/item_popular.xml" value="0.15555555555555556" />
+        <entry key="core/src/main/res/layout/item_top_rated_movie.xml" value="0.15555555555555556" />
       </map>
     </option>
   </component>

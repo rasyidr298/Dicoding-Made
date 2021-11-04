@@ -1,23 +1,17 @@
 package id.rrdev.core.ui
 
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
-import android.view.View.GONE
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.DataSource
-import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.Target
 import id.rrdev.core.R
-import id.rrdev.core.databinding.ItemCardListBinding
+import id.rrdev.core.databinding.ItemMovieVerticalBinding
 import id.rrdev.core.domain.Movie
 import id.rrdev.core.utils.DiffUtils
+import id.rrdev.core.utils.loadImage
 import java.util.*
 
-class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
+class NowPlayingAdapter : RecyclerView.Adapter<NowPlayingAdapter.MovieViewHolder>() {
 
     private var listData = ArrayList<Movie>()
     var onItemClick: ((Movie) -> Unit)? = null
@@ -35,7 +29,7 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val itemCardListBinding =
-            ItemCardListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemMovieVerticalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MovieViewHolder(itemCardListBinding)
     }
 
@@ -45,7 +39,7 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
 
     override fun getItemCount(): Int = listData.size
 
-    inner class MovieViewHolder(private val binding: ItemCardListBinding) :
+    inner class MovieViewHolder(private val binding: ItemMovieVerticalBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(movie: Movie) {
             with(binding) {
@@ -59,31 +53,7 @@ class MoviesAdapter : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
                     )
                 userScore.text = movie.voteAverage.toString()
 
-                Glide.with(itemView.context)
-                    .load(itemView.context.getString(R.string.baseUrlImage, movie.posterPath))
-                    .listener(object : RequestListener<Drawable> {
-                        override fun onLoadFailed(
-                            e: GlideException?,
-                            model: Any?,
-                            target: Target<Drawable>?,
-                            isFirstResource: Boolean
-                        ): Boolean {
-                            progressBar.visibility = GONE
-                            return false
-                        }
-
-                        override fun onResourceReady(
-                            resource: Drawable?,
-                            model: Any?,
-                            target: Target<Drawable>?,
-                            dataSource: DataSource?,
-                            isFirstResource: Boolean
-                        ): Boolean {
-                            progressBar.visibility = GONE
-                            return false
-                        }
-                    })
-                    .into(poster)
+                poster.loadImage(itemView.context.getString(R.string.baseUrlImage, movie.posterPath))
             }
         }
 
