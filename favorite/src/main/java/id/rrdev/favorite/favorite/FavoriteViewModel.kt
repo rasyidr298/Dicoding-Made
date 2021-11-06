@@ -5,8 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import id.rrdev.core.domain.IMovieAppUseCase
 import id.rrdev.core.domain.Movie
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 
 class FavoriteViewModel(private val movieAppUseCase: IMovieAppUseCase) : ViewModel() {
 

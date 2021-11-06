@@ -65,7 +65,7 @@ class MoviesFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         moviesFragmentBinding = MoviesFragmentBinding.inflate(inflater, container, false)
         additionalView()
         return binding.root

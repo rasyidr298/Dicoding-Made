@@ -10,7 +10,7 @@ import id.rrdev.core.domain.Movie
 import id.rrdev.core.utils.DiffUtils
 import id.rrdev.core.utils.loadImage
 
-class CarouselAdapter() : RecyclerView.Adapter<CarouselAdapter.MyViewHolder>() {
+class CarouselAdapter : RecyclerView.Adapter<CarouselAdapter.MyViewHolder>() {
 
     var list = ArrayList<Movie>()
     var onItemClick: ((Movie) -> Unit)? = null

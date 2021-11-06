@@ -2,9 +2,7 @@ package id.rrdev.core.utils
 
 import android.app.Activity
 import android.content.Context
-import android.content.res.Resources
 import android.graphics.Color
-import android.util.TypedValue
 import android.view.View
 import android.view.WindowManager
 import android.widget.ImageView
@@ -13,7 +11,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.snackbar.Snackbar
 import id.rrdev.core.R
-
 
 fun Context.toast(message: String) {
     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
