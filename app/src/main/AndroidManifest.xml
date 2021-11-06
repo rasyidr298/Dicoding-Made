@@ -15,6 +15,11 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AndroidMade"
         tools:targetApi="m">
+        <activity-alias
+            android:name="leakcanary.internal.activity.LeakLauncherActivity"
+            android:exported="true"
+            android:targetActivity="leakcanary.internal.activity.LeakActivity"
+            tools:node="merge" />
         <activity
             android:name=".detail.DetailActivity"
             android:exported="true" />
