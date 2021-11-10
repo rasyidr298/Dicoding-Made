@@ -3,50 +3,32 @@ dependencies {
     implementation "androidx.core:core-ktx:$core_ktx_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_version"
     implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
-    testImplementation "junit:junit:4.13.1"
+    testImplementation "junit:junit:4.13.2"
     androidTestImplementation "androidx.test.ext:junit:$androidx_junit_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.3.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
     implementation "androidx.multidex:multidex:$multidex_version"
 
     implementation "androidx.cardview:cardview:$cardview_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "com.google.android.material:material:$material_version"
-    implementation "com.github.bumptech.glide:glide:$glide_version"
     implementation "androidx.legacy:legacy-support-v4:$legacy_support_version"
+
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    //additional view
+    implementation "com.github.bumptech.glide:glide:$glide_version"
     implementation "com.gauravk.bubblenavigation:bubblenavigation:$bubble_navigation_version"
     implementation "com.github.clans:fab:$custom_fab_version"
     implementation "com.makeramen:roundedimageview:$riv_version"
     implementation "com.miguelcatalan:materialsearchview:$material_search_view_version"
     implementation "com.airbnb.android:lottie:$lottie_version"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
 
     //koin
     implementation "org.koin:koin-core:$koin_version"
     implementation "org.koin:koin-android:$koin_version"
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
-    //Play Core
-    implementation "com.google.android.play:core:1.9.0"
-
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    androidTestImplementation "androidx.room:room-testing:$room_version"
-
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
-
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines_version"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
-    implementation "androidx.room:room-ktx:$room_version"
-    api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-
     //Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary_version"
-
-    //sqlcipher
-    implementation "net.zetetic:android-database-sqlcipher:$sqlcipher_version"
-    implementation "androidx.sqlite:sqlite-ktx:$sqlite_version"
-
 }
