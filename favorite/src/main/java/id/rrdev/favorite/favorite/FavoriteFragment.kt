@@ -5,13 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.Keep
 import androidx.fragment.app.Fragment
 import id.rrdev.favorite.SectionsPagerAdapter
 import id.rrdev.favorite.databinding.FavoriteFragmentBinding
 import id.rrdev.favorite.di.favoriteModule
 import org.koin.core.context.loadKoinModules
 
-
+@Keep
 class FavoriteFragment : Fragment() {
 
     private var _fragmentFavoriteMoviesBinding: FavoriteFragmentBinding? = null
