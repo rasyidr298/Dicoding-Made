@@ -14,7 +14,9 @@
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/drawable/ic_sort.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/drawable/ic_star.xml" value="0.21574074074074073" />
+        <entry key="app/src/main/res/drawable/ic_tv_shows.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_vote.xml" value="0.21574074074074073" />
+        <entry key="app/src/main/res/drawable/ripple_deadline_button.xml" value="0.1" />
         <entry key="app/src/main/res/font/montserrat_bold.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_detail.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.125" />
